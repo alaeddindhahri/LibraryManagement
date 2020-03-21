@@ -1,0 +1,22 @@
+.modal-container{
+    position: absolute;
+    z-index: 1;
+}
+@media (min-width:1920px){
+    .modal-content,.modal-container{
+        min-width: 1200px !important;
+    }
+}
+@media (max-width:425px){
+    .modal-content,.modal-container{
+        min-width: 400px !important;
+    }
+}
+.categories{
+    color: orange;
+    font-size: 1rem;
+}
+.authors{
+    color: gray;
+    font-size: 1rem;
+}

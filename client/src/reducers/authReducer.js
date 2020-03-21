@@ -3,8 +3,7 @@ import {SET_CURRENT_USER,ADD_NEW_USER,UPDATE_CURRENT_USER,GET_ERRORS} from '../a
 
 const initialState = {
   isAuthenticated: false,
-  user: {},
-  books: [],
+  user: {}
 };
 
 const authReducer = (state = initialState, action) => {

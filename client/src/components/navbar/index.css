@@ -1,0 +1,11 @@
+.logo{
+    margin: 1%
+}
+.brand:hover{
+    opacity: .8;
+}
+.search-box{
+    flex-grow: 1;
+}
+.navbar-container{
+}

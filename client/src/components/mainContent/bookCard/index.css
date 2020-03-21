@@ -1,0 +1,16 @@
+.more-details{
+    background-color: lightblue;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color:black;
+    border: none;
+}
+.more-details:hover{
+    opacity: .8;
+}
+.card{
+    padding: 0px !important;
+}
