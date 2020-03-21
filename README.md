@@ -17,7 +17,6 @@ A step by step series of examples that tell you how to get a development env run
 * [NodeJS]
 * [ExpressJS]
 * [MongoDB]
-* [CanvasJS]
 * [Boostrap]
 
 ## Running
