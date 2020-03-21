@@ -115,7 +115,7 @@ router.post("/login", (req, res) => {
   });
 });
 
-// @route   POST api/User/current
+// @route   GET api/User/account
 // @desc    Return current User
 // @access  Private
 router.get(

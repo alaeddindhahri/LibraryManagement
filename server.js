@@ -29,7 +29,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Use Routes
 app.use('/api/users',users);
-// app.use('/api/books',books);
+app.use('/api/books',books);
 
 
 const port = process.env.PORT || 5432;
