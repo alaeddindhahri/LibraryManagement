@@ -40,7 +40,7 @@ export const logoutUser=()=>dispatch=>{
     setAuthToken(false);
     // set current User to {} which will set isAuthenticated to false
     dispatch(setCurrentUser({}));
-    window.location.href = '/';
+    window.location.href = '/login';
 }
 
 //update user
@@ -63,7 +63,7 @@ export const updateUser=(idUser,newData)=>dispatch=>{
 }
 
 //add new user
-export const addUser = (userData)=>{
+export const addUser = (userData)=>dispatch=>{
     axios.post('/api/users/register',userData)
         .then(console.log("added new user."))
         .catch(err=>dispatch({

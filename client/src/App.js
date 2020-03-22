@@ -4,27 +4,26 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import Store from "./store/index";
 
-//importing components
-import Navbar from './components/navbar/index';
-import MainContent from './components/mainContent/index';
+//importing componenets
+import LandingPage from './components/landingPage/index';
+import LoginPage from './components/userLogin/index';
+import Dashboard from './components/userDasboard/Index';
+
 
 class App extends Component{
-  state={
-    searchString:null
-  }
-  handleSearchString=str=>{
-    console.log("clicked search, new str=",this.state.searchString)
-    this.setState({
-      searchString:str
-    })
-  }
+  
   render(){
     return (
       <Provider store={Store}>
-        <div className="container-fluid">
-          <Navbar handleSearchString={this.handleSearchString}/>
-          <MainContent searchString={this.state.searchString}/>
-        </div>
+        <BrowserRouter>
+          <div className="container-fluid">
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/login" component={LoginPage} />
+              <Route path="/dashboard" component={Dashboard} />
+            </Switch>
+          </div>
+        </BrowserRouter>
       </Provider>
     );
   }

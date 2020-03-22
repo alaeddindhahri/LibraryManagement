@@ -18,10 +18,15 @@ export const getBooks=()=>dispatch=>{
 //update book
 export const updateBook=(idBook,newData)=>dispatch=>{
     axios.put(`/api/books/update/${idBook}`,newData)
-        .then(res=>dispatch({
-            type:GET_BOOKS,
-            payload:res.data
-        })
+        .then(axios.get('/api/books/all')
+                    .then(res=>dispatch({
+                        type: GET_BOOKS,
+                        payload:res.data
+                    }))
+                    .catch(err=>dispatch({
+                        type:GET_ERRORS,
+                        payload:err.data
+                    }))
         )
         .catch(err=> dispatch({
             type: GET_ERRORS,
@@ -32,10 +37,15 @@ export const updateBook=(idBook,newData)=>dispatch=>{
 //delete book
 export const deleteBook=(idBook)=>dispatch=>{
     axios.delete(`/api/books/delete/${idBook}`)
-        .then(res=>dispatch({
-            type:GET_BOOKS,
-            payload:res.data
-        }))
+        .then(axios.get('/api/books/all')
+                    .then(res=>dispatch({
+                        type: GET_BOOKS,
+                        payload:res.data
+                    }))
+                    .catch(err=>dispatch({
+                        type:GET_ERRORS,
+                        payload:err.data
+                    })))
         .catch(err=> dispatch({
             type: GET_ERRORS,
             payload: err.data

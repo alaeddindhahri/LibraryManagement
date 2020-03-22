@@ -1,0 +1,15 @@
+.modal-edit{
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+}
+@media(min-width:1024px){
+    .modal-edit-content{
+        left: 800px;
+        min-width: 100% !important;
+    }
+}
+textarea{
+    width: 400px;
+    height: 500px;
+}

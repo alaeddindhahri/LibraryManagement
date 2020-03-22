@@ -1,0 +1,14 @@
+.modal-delete{
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+}
+@media(min-width:1024px){
+    .modal-delete-content{
+        left: 800px;
+        min-width: 100% !important;
+    }
+}
+.delete-book-name{
+    font-weight: 800;
+}

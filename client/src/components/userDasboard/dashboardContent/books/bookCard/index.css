@@ -1,0 +1,6 @@
+.book-details:hover{
+    background-color: rgb(243, 243, 243);
+}
+.btn-edit-delete button{
+    margin-right: 2%;
+}

@@ -17,6 +17,9 @@ export default class index extends Component {
     render() {
         return (
             <div className="container-fluid navbar-container">
+                <div className="row login-button-container">
+                    <a type="button" class="btn btn-secondary btn-login" href="/login">Login</a>
+                </div>
                 <nav className="navbar navbar-light bg-light row">
                     <div className="brand col-lg-4 col-sm-12">
                         <a href="/"><img className="logo" src={Logo} alt="logo" width="60px"/>

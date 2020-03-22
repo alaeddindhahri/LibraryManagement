@@ -1,0 +1,9 @@
+.dashboard-navbar-brand{
+    margin-right: 10% !important;
+}
+.btn-users{
+    flex-grow: 1;
+}
+.dashboard-navbar-nav{
+    width: 100%;
+}

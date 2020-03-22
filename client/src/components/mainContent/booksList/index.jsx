@@ -14,7 +14,7 @@ class index extends Component {
     }
     render() {
         return (
-            <div className="row">
+            <div className="row cards-row">
                 {
                     this.props.searchString==null?
                     this.props.books.books.map((book,key)=>

@@ -5,7 +5,7 @@ export default class index  extends Component{
     // console.log(props)
     render(){
         return (
-            <div className="card mb-3 col-lg-6 col-xs-12" >
+            <div className="card mb-3 col-lg-5 col-xs-11" >
                 <div className="row no-gutters">
                     <div className="col-md-4">
                     <img src={this.props.book.thumbnailUrl} className="card-img" alt="book image"/>

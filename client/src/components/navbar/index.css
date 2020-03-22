@@ -1,3 +1,12 @@
+.login-button-container{
+    padding: 2px;
+    margin: 0px;
+    justify-content: flex-end;
+    background-color: rgb(247, 247, 247);
+}
+.btn-login{
+    margin-right: 2rem;
+}
 .logo{
     margin: 1%
 }
