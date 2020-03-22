@@ -1,0 +1,17 @@
+.modal-container{
+    position: absolute;
+    z-index: 1;
+}
+@media (min-width:1920px){
+    .modal-content,.modal-container{
+        min-width: 600px !important;
+    }
+}
+@media (max-width:425px){
+    .modal-content,.modal-container{
+        min-width: 400px !important;
+    }
+}
+.modal-input{
+    margin: 2% 0%;
+}

@@ -33,11 +33,11 @@ import DashboardContent from './dashboardContent/index';
                 <div className="row">
                     <DashboardContent section={this.state.section}/>
                 </div>
-                <footer className="row myfooter">
+                {/* <footer className="row myfooter">
                     <div className="copyright text-center my-auto">
                         <span>Copyright © LibraryManagement 2020</span>
                     </div>
-                </footer>
+                </footer> */}
             </div>
         )
     }

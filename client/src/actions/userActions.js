@@ -2,7 +2,7 @@ import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 
-import {SET_CURRENT_USER,ADD_NEW_USER,UPDATE_CURRENT_USER} from './types';
+import {SET_CURRENT_USER,GET_USERS,ADD_NEW_USER,UPDATE_CURRENT_USER} from './types';
 import {GET_ERRORS} from './types';
 // Login - Get User Token
 export const loginUser = userData =>dispatch=>{
@@ -65,9 +65,26 @@ export const updateUser=(idUser,newData)=>dispatch=>{
 //add new user
 export const addUser = (userData)=>dispatch=>{
     axios.post('/api/users/register',userData)
-        .then(console.log("added new user."))
+        .then(axios.get('/api/users/all')
+                    .then(res=>dispatch({
+                        type: GET_USERS,
+                        payload:res.data
+                    })))
         .catch(err=>dispatch({
             type: GET_ERRORS,
             payload: err.data
         }));
+}
+
+//get all users
+export const getUsers=()=>dispatch=>{
+    axios.get('/api/users/all')
+        .then(res=>dispatch({
+            type: GET_USERS,
+            payload:res.data
+        }))
+        .catch(err=>dispatch({
+            type:GET_ERRORS,
+            payload:err.data
+        }))
 }
